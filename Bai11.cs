@@ -10,12 +10,19 @@ namespace THUCHANH01
     {
         public string traVeChuoiDao(string s)
         {
-            // Chuyển chuỗi thành mảng các ký tự 
             char[] mangKyTu = s.ToCharArray();
-            // Gọi hàm đảo ngược mảng
             Array.Reverse(mangKyTu);
-            // Ghép mảng ký tự lại thành chuỗi mới
             return new string(mangKyTu);
+        }
+
+        public void chayBai11()
+        {
+     
+            Console.Write("Nhap vao mot chuoi can dao nguoc: ");
+            string s = Console.ReadLine();
+
+            string chuoiDao = traVeChuoiDao(s);
+            Console.WriteLine($"Chuoi sau khi dao nguoc: {chuoiDao}");
         }
     }
 }
