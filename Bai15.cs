@@ -24,6 +24,7 @@ namespace THUCHANH01
                 a[i] = int.Parse(Console.ReadLine());
             }
         }
+
         public void InMang()
         {
             Console.Write("Mang hien tai: ");
@@ -34,6 +35,7 @@ namespace THUCHANH01
             }
             Console.WriteLine();
         }
+
         public void TimMinMax()
         {
             // Giả sử phần tử đầu tiên đang là lớn nhất và nhỏ nhất
@@ -48,6 +50,7 @@ namespace THUCHANH01
             Console.WriteLine($"Gia tri nho nhat trong mang: {min}");
             Console.WriteLine($"Gia tri lon nhat trong mang: {max}");
         }
+
         public ArrayList TraVeMangSNT()
         {
             // Khởi tạo một mảng động ArrayList để lưu các số nguyên tố tìm được
@@ -80,6 +83,30 @@ namespace THUCHANH01
             }
             return DSSNT; // Trả về danh sách SNT
         }
-    }
 
+
+        public void chayBai15()
+        {
+        
+            NhapMang();
+            InMang();
+            TimMinMax();
+
+            ArrayList DSSNT = TraVeMangSNT();
+            Console.Write("Cac so nguyen to trong mang la: ");
+
+            if (DSSNT.Count == 0)
+            {
+                Console.Write("Khong co so nguyen to nao.");
+            }
+            else
+            {
+                foreach (int so in DSSNT)
+                {
+                    Console.Write(so + " ");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
 }
