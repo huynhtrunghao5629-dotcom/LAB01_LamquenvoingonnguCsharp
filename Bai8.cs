@@ -10,10 +10,23 @@ namespace THUCHANH01
     {
         public void hoanvi(ref double a, ref double b)
         {
-            // Dùng từ khóa ref để can thiệp và thay đổi trực tiếp giá trị biến truyền vào
             double temp = a;
             a = b;
             b = temp;
+        }
+
+        public void chayBai8()
+        {
+        
+            Console.Write("Nhap so thu nhat : ");
+            double x = double.Parse(Console.ReadLine());
+
+            Console.Write("Nhap so thu hai :  ");
+            double y = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Truoc khi hoan vi: x = {x}, y = {y}");
+            hoanvi(ref x, ref y);
+            Console.WriteLine($"Sau khi hoan vi: x = {x}, y = {y}");
         }
     }
 }
