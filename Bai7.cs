@@ -12,7 +12,6 @@ namespace THUCHANH01
         {
             bool laSNT = true;
 
-            // Kiểm tra logic số nguyên tố
             if (n < 2)
             {
                 laSNT = false;
@@ -28,17 +27,23 @@ namespace THUCHANH01
                     }
                 }
             }
+            return laSNT;
+        }
 
-            if (laSNT == true)
+        public void chayBai7()
+        {
+            Console.Write("Nhap vao mot so nguyen : ");
+            int n = int.Parse(Console.ReadLine());
+
+            bool ketQua = kiemtrasnt(n);
+            if (ketQua)
             {
-                Console.WriteLine("Dung");
+                Console.WriteLine($"So {n} la so nguyen to ");
             }
             else
             {
-                Console.WriteLine("Sai");
+                Console.WriteLine($"So {n} khong phai la so nguyen to ");
             }
-
-            return laSNT;
         }
     }
 }
