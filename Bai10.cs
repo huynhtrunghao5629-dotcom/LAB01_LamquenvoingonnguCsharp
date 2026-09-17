@@ -18,13 +18,22 @@ namespace THUCHANH01
 
             if (laDoiXung == true)
             {
-                Console.WriteLine("dung");
+                Console.WriteLine("Day la chuoi doi xung");
             }
             else
             {
-                Console.WriteLine("khong");
+                Console.WriteLine("Day khong phai la chuoi doi xung");
             }
             return laDoiXung;
+        }
+
+        public void chaybai10()
+        {
+   
+            Console.Write("Nhap vao mot chuoi bat ky: ");
+            string s = Console.ReadLine();
+
+            kiemTraDoiXung(s);
         }
     }
 }
